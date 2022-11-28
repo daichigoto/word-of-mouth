@@ -1,3 +1,26 @@
+## PowerShell Selenium
+
+|コマンドレット(URL系)|内容|
+|:---|:---|
+|Set-SeUrl -Url URL|Webページを開く|
+
+|コマンドレット(要素取得系)|内容|
+|:---|:---|
+|$Element = Get-SeElement -By XPath -Value xpath|要素の取得(xpath)|
+|$Element = Get-SeElement -By Id -Value id|要素の取得(id)|
+|$Element = Get-SeElement -By Name -Value name|要素の取得(name)|
+
+|コマンドレット(操作系)|内容|
+|:---|:---|
+|Invoke-SeClick -Element $Element -Action Click|クリック|
+|Invoke-SeKeys -Element $Element -Keys 文字列|文字列の入力|
+|Set-SeSelectValue -Element $Element -Value 値|selectの選択|
+|SeShouldHave -Alert -PassThru \| Clear-SeAlert -Action Accept|確認ダイアログでOKをクリック|
+
+|コマンドレット(待機系)|内容|
+|:---|:---|
+|Wait-SeElement -By XPath -Value xpath -Condition ElementToBeClickable -Timeout 秒|待機(クリック可能になるまで)|
+
 ## pacman
 
 |コマンド|内容|
