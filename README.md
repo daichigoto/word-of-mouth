@@ -21,6 +21,10 @@
 |:---|:---|
 |Wait-SeElement -By XPath -Value xpath -Condition ElementToBeClickable -Timeout 秒|待機(クリック可能になるまで)|
 
+|コマンドレット(JavaScriptコード実行)|内容|
+|:---|:---|
+|Invoke-SeJavascript -Script 'JavaScriptコード'|JavaScriptを実行|
+
 ## pacman
 
 |コマンド|内容|
