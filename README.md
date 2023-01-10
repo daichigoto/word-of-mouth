@@ -26,7 +26,7 @@
 |:---|:---|
 |Invoke-SeJavascript -Script 'JavaScriptコード'|JavaScriptを実行|
 
-|コマンドレット(ファイルの選択)|内容|
+||コマンドレット(ファイルの選択)|内容|
 |:---|:---|:---|
 |1.|$Element = Get-SeElement -By XPath -Value xpath|要素の取得(xpath)|
 |2.|Invoke-SeKeys -Element $Element -Keys $env:HOME|ファイル選択ダイアログを表示|
