@@ -26,6 +26,13 @@
 |:---|:---|
 |Invoke-SeJavascript -Script 'JavaScriptコード'|JavaScriptを実行|
 
+|コマンドレット(ファイルの選択)|内容|
+|:---|:---|:---|
+|1.|$Element = Get-SeElement -By XPath -Value xpath|要素の取得(xpath)|
+|2.|Invoke-SeKeys -Element $Element -Keys $env:HOME|ファイル選択ダイアログを表示|
+|3.|add-type -AssemblyName System.Windows.Forms|.NETのSystem.Windows.Formsを使うために読み込み|
+|4.|[System.Windows.Forms.SendKeys]::SendWait($env:HOME+"ファイルパス`n")|ファイルパスの入力と選択|
+
 ## pacman
 
 |コマンド|内容|
